@@ -9,10 +9,6 @@ chdir(dirname(__DIR__));
 
 // autoloading
 require_once 'vendor/autoload.php';
-
-use Flex\Uuid;
-
-var_dump(Uuid::get());
 ?>
 
 <!DOCTYPE html>
