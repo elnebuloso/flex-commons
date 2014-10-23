@@ -8,7 +8,6 @@ use Exception;
  * Class Registry
  * Inspired by Zendframework1 Registry Pattern
  *
- * @package Flex
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class Registry extends ArrayObject {

@@ -6,7 +6,6 @@ use Flex\Uuid;
 /**
  * Class UuidTest
  *
- * @package FlexTest
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class UuidTest extends \PHPUnit_Framework_TestCase {

@@ -15,7 +15,6 @@ namespace Flex;
  * Mit UUID markierte Informationen können somit später in einer einzigen Datenbank zusammengeführt werden,
  * ohne Bezeichnerkonflikte auflösen zu müssen.
  *
- * @package Flex
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class Uuid {
