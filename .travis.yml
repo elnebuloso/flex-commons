@@ -9,6 +9,3 @@ php:
 
 install:
   - "composer install"
-
-after_script:
-  - "php vendor/bin/coveralls"

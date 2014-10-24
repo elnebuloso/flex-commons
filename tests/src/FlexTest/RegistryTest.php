@@ -16,14 +16,14 @@ class RegistryTest extends \PHPUnit_Framework_TestCase {
      * @expectedException Exception
      * @expectedExceptionMessage no data for key foo
      */
-    public function getNoDataForKey() {
+    public function test_getNoDataForKey() {
         Registry::get('foo');
     }
 
     /**
      * @test
      */
-    public function setDataForKey() {
+    public function test_setDataForKey() {
         Registry::set('bar', 'barvalue');
         $this->assertEquals('barvalue', Registry::get('bar'));
     }
@@ -31,7 +31,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function isRegistered() {
+    public function test_isRegistered() {
         Registry::unsetInstance();
         $this->assertFalse(Registry::isRegistered('bar'));
 
@@ -42,7 +42,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function setInstanceNewInstance() {
+    public function test_setInstanceNewInstance() {
         Registry::unsetInstance();
 
         $foo = new Registry(array('bar' => 'barvalue'));
@@ -55,7 +55,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase {
      * @expectedException Exception
      * @expectedExceptionMessage registry is already initialized
      */
-    public function setInstanceHasInstance() {
+    public function test_setInstanceHasInstance() {
         Registry::unsetInstance();
         Registry::set('bar', 'barvalue');
 

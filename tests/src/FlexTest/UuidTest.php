@@ -15,7 +15,7 @@ class UuidTest extends \PHPUnit_Framework_TestCase {
      *
      * @test
      */
-    public function uuidPattern() {
+    public function test_uuidPattern() {
         $pattern = '`([a-f0-9]{8})-([a-f0-9]{4})-([a-f0-9]{4})-([a-f0-9]{4})-([a-f0-9]{12})`';
         $this->assertRegExp($pattern, Uuid::get(), 'uuid does not match the pattern');
     }
