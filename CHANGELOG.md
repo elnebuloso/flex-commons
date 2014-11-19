@@ -1,8 +1,10 @@
 # CHANGELOG
 
-## 7.1.5
+## 2.1.0
 
-- just phpmd fixes to test ci server etc.
+- added Collection from flex-data
+- added ToArrayInterface from flex-data
+- added ToJsonInterface from flex-data
 
 ## 2.0.0
 
