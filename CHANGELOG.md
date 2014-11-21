@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.2.0
+
+- added UserInterface
+
 ## 2.1.0
 
 - added Collection from flex-data
