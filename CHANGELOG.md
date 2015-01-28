@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.2.1
+
+- just some coding conventions
+
 ## 2.2.0
 
 - added UserInterface
