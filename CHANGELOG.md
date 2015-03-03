@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.3.0
+
+- removed wrong UserInterface
+
 ## 2.2.1
 
 - just some coding conventions
