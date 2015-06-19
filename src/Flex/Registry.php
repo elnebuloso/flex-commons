@@ -10,7 +10,8 @@ use Exception;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Registry extends ArrayObject {
+class Registry extends ArrayObject
+{
 
     /**
      * @var Registry
@@ -21,15 +22,17 @@ class Registry extends ArrayObject {
      * @param array $array
      * @param int $flags
      */
-    public function __construct($array = array(), $flags = parent::ARRAY_AS_PROPS) {
+    public function __construct($array = array(), $flags = parent::ARRAY_AS_PROPS)
+    {
         parent::__construct($array, $flags);
     }
 
     /**
      * @return Registry
      */
-    public static function getInstance() {
-        if(self::$registry === null) {
+    public static function getInstance()
+    {
+        if (self::$registry === null) {
             self::$registry = new self();
         }
 
@@ -41,10 +44,11 @@ class Registry extends ArrayObject {
      * @return mixed
      * @throws Exception
      */
-    public static function get($key) {
+    public static function get($key)
+    {
         $instance = self::getInstance();
 
-        if(!$instance->offsetExists($key)) {
+        if (!$instance->offsetExists($key)) {
             throw new Exception("no data for key {$key}");
         }
 
@@ -55,7 +59,8 @@ class Registry extends ArrayObject {
      * @param string $key
      * @param mixed $value
      */
-    public static function set($key, $value) {
+    public static function set($key, $value)
+    {
         $instance = self::getInstance();
         $instance->offsetSet($key, $value);
     }
@@ -64,8 +69,9 @@ class Registry extends ArrayObject {
      * @param string $key
      * @return bool
      */
-    public static function isRegistered($key) {
-        if(self::$registry === null) {
+    public static function isRegistered($key)
+    {
+        if (self::$registry === null) {
             return false;
         }
 
@@ -76,8 +82,9 @@ class Registry extends ArrayObject {
      * @param Registry $registry
      * @throws Exception
      */
-    public static function setInstance(Registry $registry) {
-        if(self::$registry !== null) {
+    public static function setInstance(Registry $registry)
+    {
+        if (self::$registry !== null) {
             throw new Exception('registry is already initialized');
         }
 
@@ -87,7 +94,8 @@ class Registry extends ArrayObject {
     /**
      * @return void
      */
-    public static function unsetInstance() {
+    public static function unsetInstance()
+    {
         self::$registry = null;
     }
 
@@ -97,7 +105,8 @@ class Registry extends ArrayObject {
      * @param string $key
      * @return bool
      */
-    public function offsetExists($key) {
+    public function offsetExists($key)
+    {
         return array_key_exists($key, $this);
     }
 }

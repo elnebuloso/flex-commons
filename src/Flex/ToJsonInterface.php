@@ -6,7 +6,8 @@ namespace Flex;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-interface ToJsonInterface {
+interface ToJsonInterface
+{
 
     /**
      * @return array

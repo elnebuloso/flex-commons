@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.3.1
+
+- PSR1, PSR2 Coding Standard
+
 ## 2.3.0
 
 - removed wrong UserInterface

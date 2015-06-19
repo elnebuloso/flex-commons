@@ -8,12 +8,14 @@ use Flex\Collection;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class CollectionTest extends \PHPUnit_Framework_TestCase {
+class CollectionTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @test
      */
-    public function test_construct() {
+    public function test_construct()
+    {
         $collectionData = array(
             'foo',
             'bar'
@@ -29,7 +31,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_elements() {
+    public function test_elements()
+    {
         $collectionData = array(
             'foo',
             'bar'
@@ -44,7 +47,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_addElement() {
+    public function test_addElement()
+    {
         $data = 'element';
 
         $collection = new Collection();
@@ -59,7 +63,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_getElement() {
+    public function test_getElement()
+    {
         $data = 'element';
 
         $collection = new Collection();
@@ -72,7 +77,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_removeElement() {
+    public function test_removeElement()
+    {
         $data = 'element';
 
         $collection = new Collection();
@@ -81,15 +87,19 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
         $collection->removeElement('bar');
 
         $elements = $collection->getElements();
-        $this->assertEquals($elements, array(
-            'foo' => 'element'
-        ));
+        $this->assertEquals(
+             $elements,
+                 array(
+                     'foo' => 'element'
+                 )
+        );
     }
 
     /**
      * @test
      */
-    public function test_totalCount() {
+    public function test_totalCount()
+    {
         $collection = new Collection();
         $collection->setTotalCount(2);
 
@@ -99,7 +109,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_countable() {
+    public function test_countable()
+    {
         $collectionData = array(
             'foo',
             'bar'
@@ -112,7 +123,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_arrayAccess() {
+    public function test_arrayAccess()
+    {
         $collectionData = array(
             'foo',
             'bar'
@@ -139,7 +151,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_toArray() {
+    public function test_toArray()
+    {
         $object1 = new CollectionTest_Collection();
         $object2 = new CollectionTest_Collection();
 
@@ -168,7 +181,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_toJson() {
+    public function test_toJson()
+    {
         $object1 = new CollectionTest_Collection();
         $object2 = new CollectionTest_Collection();
 
@@ -196,7 +210,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_iterator() {
+    public function test_iterator()
+    {
         $collectionData = array(
             'foo',
             'bar',
@@ -229,12 +244,14 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
     }
 }
 
-class CollectionTest_Collection extends Collection {
+class CollectionTest_Collection extends Collection
+{
 
     /**
      * @return array
      */
-    public function toArray() {
+    public function toArray()
+    {
         return array(
             'nickname' => 'foo'
         );

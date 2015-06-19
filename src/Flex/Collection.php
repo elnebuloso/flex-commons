@@ -6,7 +6,8 @@ namespace Flex;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterface, ToJsonInterface {
+class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterface, ToJsonInterface
+{
 
     /**
      * @var array
@@ -22,7 +23,8 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param array $elements
      * @param int $totalCount
      */
-    public function __construct(array $elements = array(), $totalCount = null) {
+    public function __construct(array $elements = array(), $totalCount = null)
+    {
         $this->elements = $elements;
         $this->totalCount = $totalCount;
     }
@@ -30,14 +32,16 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @return array
      */
-    public function getElements() {
+    public function getElements()
+    {
         return $this->elements;
     }
 
     /**
      * @param array $elements
      */
-    public function setElements(array $elements) {
+    public function setElements(array $elements)
+    {
         $this->elements = $elements;
     }
 
@@ -45,11 +49,11 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param mixed $element
      * @param mixed $id
      */
-    public function addElement($element, $id = null) {
-        if(!is_null($id)) {
+    public function addElement($element, $id = null)
+    {
+        if (!is_null($id)) {
             $this->elements[$id] = $element;
-        }
-        else {
+        } else {
             $this->elements[] = $element;
         }
     }
@@ -58,8 +62,9 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param mixed $id
      * @return null
      */
-    public function getElement($id) {
-        if(array_key_exists($id, $this->elements)) {
+    public function getElement($id)
+    {
+        if (array_key_exists($id, $this->elements)) {
             return $this->elements[$id];
         }
 
@@ -69,8 +74,9 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @param mixed $id
      */
-    public function removeElement($id) {
-        if(array_key_exists($id, $this->elements)) {
+    public function removeElement($id)
+    {
+        if (array_key_exists($id, $this->elements)) {
             unset($this->elements[$id]);
         }
     }
@@ -78,30 +84,32 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @return int
      */
-    public function getTotalCount() {
+    public function getTotalCount()
+    {
         return $this->totalCount;
     }
 
     /**
      * @param int $totalCount
      */
-    public function setTotalCount($totalCount) {
+    public function setTotalCount($totalCount)
+    {
         $this->totalCount = $totalCount;
     }
 
     /**
      * @return array
      */
-    public function toArray() {
+    public function toArray()
+    {
         $elements = array();
 
-        foreach($this->elements as $element) {
-            if(is_object($element)) {
-                if($element instanceof ToArrayInterface) {
+        foreach ($this->elements as $element) {
+            if (is_object($element)) {
+                if ($element instanceof ToArrayInterface) {
                     $elements[] = $element->toArray();
                 }
-            }
-            else {
+            } else {
                 $elements[] = $element;
             }
         }
@@ -112,42 +120,48 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @return string
      */
-    public function toJson() {
+    public function toJson()
+    {
         return json_encode($this->toArray());
     }
 
     /**
      * @return mixed
      */
-    public function key() {
+    public function key()
+    {
         return key($this->elements);
     }
 
     /**
      * @return mixed
      */
-    public function next() {
+    public function next()
+    {
         return next($this->elements);
     }
 
     /**
      * @return void
      */
-    public function rewind() {
+    public function rewind()
+    {
         reset($this->elements);
     }
 
     /**
      * @return bool
      */
-    public function valid() {
+    public function valid()
+    {
         return $this->current() !== false;
     }
 
     /**
      * @return mixed
      */
-    public function current() {
+    public function current()
+    {
         return current($this->elements);
     }
 
@@ -155,7 +169,8 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param mixed $offset
      * @return bool
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         return isset($this->elements[$offset]);
     }
 
@@ -163,7 +178,8 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param mixed $offset
      * @return mixed
      */
-    public function offsetGet($offset) {
+    public function offsetGet($offset)
+    {
         return isset($this->elements[$offset]) ? $this->elements[$offset] : null;
     }
 
@@ -171,11 +187,11 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param mixed $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value) {
-        if(is_null($offset)) {
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
             $this->elements[] = $value;
-        }
-        else {
+        } else {
             $this->elements[$offset] = $value;
         }
     }
@@ -183,8 +199,9 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @param mixed $offset
      */
-    public function offsetUnset($offset) {
-        if(array_key_exists($offset, $this->elements)) {
+    public function offsetUnset($offset)
+    {
+        if (array_key_exists($offset, $this->elements)) {
             unset($this->elements[$offset]);
         }
     }
@@ -192,7 +209,8 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
     /**
      * @return int
      */
-    public function count() {
+    public function count()
+    {
         return count($this->elements);
     }
 }

@@ -6,7 +6,8 @@ namespace Flex;
  * Ein Universally Unique Identifier (UUID) ist ein Standard für Identifikatoren,
  * der in der Softwareentwicklung verwendet wird.
  * Er ist von der Open Software Foundation (OSF) als Teil des Distributed Computing Environment (DCE) standardisiert.
- * Die Absicht hinter UUIDs ist, Informationen in verteilten Systemen ohne großartige zentrale Koordination eindeutig kennzeichnen zu können.
+ * Die Absicht hinter UUIDs ist, Informationen in verteilten Systemen
+ * ohne großartige zentrale Koordination eindeutig kennzeichnen zu können.
  * Obwohl die Eindeutigkeit für generierte UUID nicht garantiert ist,
  * ist die Gesamtzahl der zufällig generierten UUIDs (Version 4) mit 2^122 = 5,3169 * 10^36 so groß,
  * dass die Wahrscheinlichkeit der Erzeugung zweier gleicher UUIDs sehr klein ist.
@@ -17,14 +18,16 @@ namespace Flex;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Uuid {
+class Uuid
+{
 
     /**
      * erstellt eine 36 stellige uuid nach dce standard
      *
      * @return string
      */
-    public static function get() {
+    public static function get()
+    {
         mt_srand(intval(microtime(true) * 1000));
 
         $b = md5(uniqid(mt_rand(), true), true);
