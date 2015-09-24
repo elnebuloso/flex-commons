@@ -4,6 +4,7 @@
     "license": "MIT",
     "description": "common components for php",
     "keywords": [
+        "php",
         "components"
     ],
     "authors": [
