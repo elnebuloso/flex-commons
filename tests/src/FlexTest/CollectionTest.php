@@ -11,16 +11,15 @@ use FlexTest\CollectionTest\TestCollection;
  */
 class CollectionTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */
     public function testConstruct()
     {
-        $collectionData = array(
+        $collectionData = [
             'foo',
-            'bar'
-        );
+            'bar',
+        ];
         $totalCount = 2;
 
         $collection = new Collection($collectionData, $totalCount);
@@ -34,10 +33,10 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testElements()
     {
-        $collectionData = array(
+        $collectionData = [
             'foo',
-            'bar'
-        );
+            'bar',
+        ];
 
         $collection = new Collection();
         $collection->setElements($collectionData);
@@ -88,9 +87,9 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
         $collection->removeElement('bar');
 
         $elements = $collection->getElements();
-        $expected = array(
-            'foo' => 'element'
-        );
+        $expected = [
+            'foo' => 'element',
+        ];
 
         $this->assertEquals($expected, $elements);
     }
@@ -111,10 +110,10 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testCountable()
     {
-        $collectionData = array(
+        $collectionData = [
             'foo',
-            'bar'
-        );
+            'bar',
+        ];
 
         $collection = new Collection($collectionData);
         $this->assertEquals(2, $collection->count());
@@ -125,10 +124,10 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testArrayAccess()
     {
-        $collectionData = array(
+        $collectionData = [
             'foo',
-            'bar'
-        );
+            'bar',
+        ];
 
         $collection = new Collection($collectionData);
 
@@ -156,24 +155,24 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
         $object1 = new TestCollection();
         $object2 = new TestCollection();
 
-        $collectionData = array(
+        $collectionData = [
             $object1,
             $object2,
-            'foo'
-        );
+            'foo',
+        ];
 
         $collection = new Collection($collectionData);
         $elements = $collection->toArray();
 
-        $equals = array(
-            array(
-                'nickname' => 'foo'
-            ),
-            array(
-                'nickname' => 'foo'
-            ),
-            'foo'
-        );
+        $equals = [
+            [
+                'nickname' => 'foo',
+            ],
+            [
+                'nickname' => 'foo',
+            ],
+            'foo',
+        ];
 
         $this->assertEquals($equals, $elements);
     }
@@ -186,21 +185,21 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
         $object1 = new TestCollection();
         $object2 = new TestCollection();
 
-        $collectionData = array(
+        $collectionData = [
             $object1,
             $object2,
-            'foo'
-        );
+            'foo',
+        ];
 
-        $equals = array(
-            array(
-                'nickname' => 'foo'
-            ),
-            array(
-                'nickname' => 'foo'
-            ),
-            'foo'
-        );
+        $equals = [
+            [
+                'nickname' => 'foo',
+            ],
+            [
+                'nickname' => 'foo',
+            ],
+            'foo',
+        ];
         $equals = json_encode($equals);
 
         $collection = new Collection($collectionData);
@@ -212,11 +211,11 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testIterator()
     {
-        $collectionData = array(
+        $collectionData = [
             'foo',
             'bar',
-            'baz'
-        );
+            'baz',
+        ];
 
         $collection = new Collection($collectionData);
 

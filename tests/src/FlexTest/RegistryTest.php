@@ -11,7 +11,6 @@ use Flex\Registry;
  */
 class RegistryTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      * @expectedException Exception
@@ -50,7 +49,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
     {
         Registry::unsetInstance();
 
-        $foo = new Registry(array('bar' => 'barvalue'));
+        $foo = new Registry(['bar' => 'barvalue']);
         Registry::setInstance($foo);
         $this->assertEquals('barvalue', Registry::get('bar'));
     }
@@ -65,7 +64,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
         Registry::unsetInstance();
         Registry::set('bar', 'barvalue');
 
-        $foo = new Registry(array('bar' => 'barvalue'));
+        $foo = new Registry(['bar' => 'barvalue']);
         Registry::setInstance($foo);
     }
 }
