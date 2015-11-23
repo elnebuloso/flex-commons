@@ -1,19 +1,20 @@
 <?php
 namespace Flex;
 
+use ArrayAccess;
+use Countable;
+use Iterator;
+
 /**
  * Class Collection
- *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterface, ToJsonInterface
+class Collection implements Iterator, ArrayAccess, Countable, ToArrayInterface, ToJsonInterface
 {
-
     /**
      * @var array
      */
-    private $elements = array();
-
+    private $elements = [];
     /**
      * @var int
      */
@@ -23,7 +24,7 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      * @param array $elements
      * @param int $totalCount
      */
-    public function __construct(array $elements = array(), $totalCount = null)
+    public function __construct(array $elements = [], $totalCount = null)
     {
         $this->elements = $elements;
         $this->totalCount = $totalCount;
@@ -102,7 +103,7 @@ class Collection implements \Iterator, \ArrayAccess, \Countable, ToArrayInterfac
      */
     public function toArray()
     {
-        $elements = array();
+        $elements = [];
 
         foreach ($this->elements as $element) {
             if (is_object($element)) {

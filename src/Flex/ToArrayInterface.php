@@ -8,7 +8,6 @@ namespace Flex;
  */
 interface ToArrayInterface
 {
-
     /**
      * @return array
      */

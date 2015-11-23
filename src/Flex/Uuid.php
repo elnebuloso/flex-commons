@@ -20,7 +20,6 @@ namespace Flex;
  */
 class Uuid
 {
-
     /**
      * erstellt eine 36 stellige uuid nach dce standard
      *

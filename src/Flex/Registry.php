@@ -12,7 +12,6 @@ use Exception;
  */
 class Registry extends ArrayObject
 {
-
     /**
      * @var Registry
      */
@@ -22,7 +21,7 @@ class Registry extends ArrayObject
      * @param array $array
      * @param int $flags
      */
-    public function __construct($array = array(), $flags = parent::ARRAY_AS_PROPS)
+    public function __construct($array = [], $flags = parent::ARRAY_AS_PROPS)
     {
         parent::__construct($array, $flags);
     }
