@@ -7,6 +7,7 @@ use Iterator;
 
 /**
  * Class Collection
+ *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class Collection implements Iterator, ArrayAccess, Countable, ToArrayInterface, ToJsonInterface
@@ -15,6 +16,7 @@ class Collection implements Iterator, ArrayAccess, Countable, ToArrayInterface, 
      * @var array
      */
     private $elements = [];
+
     /**
      * @var int
      */
