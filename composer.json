@@ -26,5 +26,8 @@
         "psr-0": {
             "FlexTest\\": "tests/src/"
         }
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "^1.0"
     }
 }
