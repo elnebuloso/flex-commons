@@ -1,6 +1,7 @@
 # flex-commons
 
 [![Build Status](https://travis-ci.org/elnebuloso/flex-commons.svg?branch=master)](https://travis-ci.org/elnebuloso/flex-commons)
+[![Coverage Status](https://coveralls.io/repos/github/elnebuloso/flex-commons/badge.svg?branch=master)](https://coveralls.io/github/elnebuloso/flex-commons?branch=master)
 
 ## Requirements
 
