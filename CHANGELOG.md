@@ -2,8 +2,9 @@
 
 ## 4.0.0
 
-- removed support for php 5.4
 - updated namespace to elnebuloso\Flex
+- removed support for php 5.4
+- removed support for HHVM
 
 ## 3.0.0
 
