@@ -1,14 +1,15 @@
 <?php
-namespace FlexTest;
+namespace elnebuloso\FlexTest;
 
-use Flex\Uuid;
+use elnebuloso\Flex\Uuid;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class UuidTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class UuidTest extends \PHPUnit_Framework_TestCase
+class UuidTest extends PHPUnit_Framework_TestCase
 {
     /**
      * c851db2f-f7b2-4e4f-9ea0-343f592f4cb7

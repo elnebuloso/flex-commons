@@ -1,15 +1,16 @@
 <?php
-namespace FlexTest;
+namespace elnebuloso\FlexTest;
 
+use elnebuloso\Flex\Registry;
 use Exception;
-use Flex\Registry;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class RegistryTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class RegistryTest extends \PHPUnit_Framework_TestCase
+class RegistryTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

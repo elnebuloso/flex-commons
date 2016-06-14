@@ -1,7 +1,7 @@
 <?php
-namespace FlexTest\CollectionTest;
+namespace elnebuloso\FlexTest\CollectionTest;
 
-use Flex\Collection;
+use elnebuloso\Flex\Collection;
 
 /**
  * Class TestCollection

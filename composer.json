@@ -15,19 +15,21 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
-    },
-    "autoload": {
-        "psr-0": {
-            "Flex\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-0": {
-            "FlexTest\\": "tests/src/"
-        }
+        "php": ">=5.5.0"
     },
     "require-dev": {
         "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "elnebuloso\\Flex\\": "src/Flex/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "elnebuloso\\FlexTest\\": "tests/src/FlexTest/"
+        }
+    },
+    "suggest": {
     }
 }

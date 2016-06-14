@@ -1,5 +1,5 @@
 <?php
-namespace Flex;
+namespace elnebuloso\Flex;
 
 use ArrayAccess;
 use Countable;
@@ -10,7 +10,7 @@ use Iterator;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Collection implements Iterator, ArrayAccess, Countable, ToArrayInterface, ToJsonInterface
+class Collection implements Iterator, ArrayAccess, Countable, HasToArray, HasToJson
 {
     /**
      * @var array
@@ -109,7 +109,7 @@ class Collection implements Iterator, ArrayAccess, Countable, ToArrayInterface, 
 
         foreach ($this->elements as $element) {
             if (is_object($element)) {
-                if ($element instanceof ToArrayInterface) {
+                if ($element instanceof HasToArray) {
                     $elements[] = $element->toArray();
                 }
             } else {

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.0.0
+
+- removed support for php 5.4
+- updated namespace to elnebuloso\Flex
+
 ## 3.0.0
 
 - no more support for php 5.3

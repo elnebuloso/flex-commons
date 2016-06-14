@@ -1,15 +1,16 @@
 <?php
-namespace FlexTest;
+namespace elnebuloso\FlexTest;
 
-use Flex\Collection;
-use FlexTest\CollectionTest\TestCollection;
+use elnebuloso\Flex\Collection;
+use elnebuloso\FlexTest\CollectionTest\TestCollection;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class CollectionTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class CollectionTest extends \PHPUnit_Framework_TestCase
+class CollectionTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

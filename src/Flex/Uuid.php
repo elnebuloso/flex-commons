@@ -1,5 +1,5 @@
 <?php
-namespace Flex;
+namespace elnebuloso\Flex;
 
 /**
  * Class Uuid

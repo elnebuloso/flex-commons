@@ -1,12 +1,12 @@
 <?php
-namespace Flex;
+namespace elnebuloso\Flex;
 
 /**
  * Class ToJsonInterface
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-interface ToJsonInterface
+interface HasToJson
 {
     /**
      * @return array

@@ -1,12 +1,12 @@
 <?php
-namespace Flex;
+namespace elnebuloso\Flex;
 
 /**
  * Class ToArrayInterface
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-interface ToArrayInterface
+interface HasToArray
 {
     /**
      * @return array
