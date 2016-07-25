@@ -1,5 +1,5 @@
 <?php
-namespace elnebuloso\FlexTest;
+namespace elnebulosoTest\Flex;
 
 use elnebuloso\Flex\Registry;
 use Exception;

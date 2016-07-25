@@ -1,8 +1,8 @@
 <?php
-namespace elnebuloso\FlexTest;
+namespace elnebulosoTest\Flex;
 
 use elnebuloso\Flex\Collection;
-use elnebuloso\FlexTest\CollectionTest\TestCollection;
+use elnebulosoTest\Flex\CollectionTest\TestCollection;
 use PHPUnit_Framework_TestCase;
 
 /**
