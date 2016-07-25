@@ -27,7 +27,7 @@ class Uuid
      */
     public static function get()
     {
-        mt_srand(intval(microtime(true) * 1000));
+        mt_srand((int) (microtime(true) * 1000));
 
         $b = md5(uniqid(mt_rand(), true), true);
         $b[6] = chr((ord($b[6]) & 0x0F) | 0x40);

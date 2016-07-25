@@ -54,7 +54,7 @@ class Collection implements Iterator, ArrayAccess, Countable, HasToArray, HasToJ
      */
     public function addElement($element, $id = null)
     {
-        if (!is_null($id)) {
+        if ($id !== null) {
             $this->elements[$id] = $element;
         } else {
             $this->elements[] = $element;
@@ -192,7 +192,7 @@ class Collection implements Iterator, ArrayAccess, Countable, HasToArray, HasToJ
      */
     public function offsetSet($offset, $value)
     {
-        if (is_null($offset)) {
+        if ($offset === null) {
             $this->elements[] = $value;
         } else {
             $this->elements[$offset] = $value;
