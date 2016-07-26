@@ -19,13 +19,13 @@
     },
     "require-dev": {},
     "autoload": {
-        "psr-0": {
-            "elnebuloso\\": "src/"
+        "psr-4": {
+            "elnebuloso\\": "src/elnebuloso/"
         }
     },
     "autoload-dev": {
-        "psr-0": {
-            "elnebulosoTest\\": "tests/src/"
+        "psr-4": {
+            "elnebuloso\\": "tests/src/elnebuloso/"
         }
     },
     "suggest": {},

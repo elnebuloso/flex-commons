@@ -1,5 +1,5 @@
 <?php
-namespace elnebulosoTest\Flex\CollectionTest;
+namespace elnebuloso\FlexTest\CollectionTest;
 
 use elnebuloso\Flex\Collection;
 

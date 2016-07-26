@@ -1,5 +1,5 @@
 <?php
-namespace elnebulosoTest\Flex;
+namespace elnebuloso\FlexTest;
 
 use elnebuloso\Flex\Uuid;
 use PHPUnit_Framework_TestCase;
