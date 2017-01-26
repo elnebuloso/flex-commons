@@ -20,12 +20,12 @@
     "require-dev": {},
     "autoload": {
         "psr-4": {
-            "elnebuloso\\": "src/elnebuloso/"
+            "elnebuloso\\Flex\\": "src/elnebuloso-flex/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "elnebuloso\\": "tests/src/elnebuloso/"
+            "elnebuloso\\FlexTest\\": "tests/elnebuloso-flex-test/"
         }
     },
     "suggest": {},

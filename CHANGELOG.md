@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.0.1
+
+- psr-4 autoloading
+
 ## 5.0.0
 
 - removed support for php 5.4
